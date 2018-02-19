@@ -1,9 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils import timezone
+from django.template import loader
 
 def index(request):
     datetime = str(timezone.now().date())+" "+str(timezone.now().time())
-    return HttpResponse("Hello World: "+datetime)
+    template = loader.get_template('smartmirror/index.html')
+    context = {
+        "datetime": datetime,
+    }
+    return HttpResponse(template.render(context, request))
 
 # Create your views here.
