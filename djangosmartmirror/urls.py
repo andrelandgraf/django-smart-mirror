@@ -20,6 +20,4 @@ from django.urls import path, include
 urlpatterns = [
     path('mirror/', include('smartmirror.urls')),
     path('admin/', admin.site.urls),
-    # TODO is this ledgit?
-    path('', include('smartmirror.urls')),
 ]

@@ -5,9 +5,8 @@ function startTime() {
     var s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('time').innerHTML =
-    h + ":" + m + ":" + s;
-    var t = setTimeout(startTime, 500);
+    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+    setTimeout(startTime, 500);
 }
 
 function checkTime(i) {

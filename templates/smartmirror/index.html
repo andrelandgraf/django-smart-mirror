@@ -3,17 +3,18 @@
 <head>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'smartmirror/css/style.css' %}" />
-    <script src="{% static 'smartmirror/js/clock.js' %}">
-    </script>
+    <script src="{% static 'smartmirror/js/clock.js' %}"></script>
     <meta charset="UTF-8">
     <title>Mirror</title>
 </head>
-<body onload="startTime()">
+<body onload="startTime();">
     <div id="title">
         Hello World!
         {{ datetime }}
-        <img src="{% static 'smartmirror/img' %}"
     </div>
     <div id="time"></div>
+    <img id="imgshow" src="{% static 'smartmirror/img/img0.jpg' %}" alt="Image Show" height="360px" width="440px">
+    <div id="imgcount" hidden>{{ imgcount }}</div>
+    <script src="{% static 'smartmirror/js/imgshow.js' %}"></script>
 </body>
 </html>
