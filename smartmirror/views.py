@@ -6,12 +6,10 @@ import fnmatch, os, base64
 from djangosmartmirror import settings
 
 def index(request):
-    datetime = str(timezone.now().date())+" "+str(timezone.now().time())
-    imgcount = len(fnmatch.filter(os.listdir(settings.BASE_DIR+'/smartmirror/static/smartmirror/img/'), '*.jpg'))
+    imgcount = len(fnmatch.filter(os.listdir(settings.BASE_DIR+'/smartmirror/static/img/'), '*.jpg'))
 
     template = loader.get_template('smartmirror/index.html')
     context = {
-        "datetime": datetime,
         "imgcount": imgcount,
     }
 
@@ -20,7 +18,7 @@ def index(request):
 def showimage(request, imgid):
     img_nr = imgid
     try:
-        with open(settings.BASE_DIR+'/smartmirror/static/smartmirror/img/img'+str(img_nr)+'.jpg', "rb") as f:
+        with open(settings.BASE_DIR+'/smartmirror/static/img/img'+str(img_nr)+'.jpg', "rb") as f:
             return HttpResponse(base64.b64encode(f.read()), content_type="image/jpeg")
     except IOError:
         raise Http404("Image does not exist")

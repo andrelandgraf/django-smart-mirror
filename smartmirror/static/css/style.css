@@ -1,0 +1,43 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#time{
+    float: right;
+    clear: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 150px;
+    color: black;
+    font-size: 30px;
+    font-weight: 300;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#weather {
+  float: left;
+  clear: left;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 300px;
+  text-transform: uppercase;
+}
+
+#twitter-timeline{
+    float: right;
+    clear: right;
+    margin-top: 15px;
+    margin-right: 5px;;
+}
+
+#imgshow{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+

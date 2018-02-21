@@ -1,0 +1,25 @@
+{
+  "name": "django-smart-mirror",
+  "homepage": "https://github.com/andrelandgraf/django-smart-mirror",
+  "authors": [
+    "andrelandgraf <andre.timo.landgraf@gmail.com>"
+  ],
+  "description": "smart mirror django based webapp",
+  "main": "",
+  "keywords": [
+    "smartmirror",
+    "django"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "simpleWeather": "^3.1.0"
+  }
+}

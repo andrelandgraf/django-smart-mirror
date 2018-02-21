@@ -2,19 +2,31 @@
 <html lang="en">
 <head>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'smartmirror/css/style.css' %}" />
-    <script src="{% static 'smartmirror/js/clock.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/weather.css' %}" />
+    <script src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
+    <script src="{% static 'bower_components/simpleWeather/jquery.simpleWeather.js' %}"></script>
+    <script src="{% static 'js/weather.js' %}"></script>
+    <script src="{% static 'js/clock.js' %}"></script>
     <meta charset="UTF-8">
     <title>Mirror</title>
 </head>
 <body onload="startTime();">
-    <div id="title">
-        Hello World!
-        {{ datetime }}
-    </div>
+
+    <div id="weather"></div>
     <div id="time"></div>
-    <img id="imgshow" src="{% static 'smartmirror/img/img0.jpg' %}" alt="Image Show" height="360px" width="440px">
+
+    <div id="twitter-timeline" >
+        <a class="twitter-timeline" data-width="400" data-height="1000" data-theme="light"
+            href="https://twitter.com/AndreLandgraf94/lists/technews?ref_src=twsrc%5Etfw"
+            data-chrome="noheader nofooter">
+            Tech News
+        </a>
+    </div>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <img id="imgshow" src="{% static 'img/img0.jpg' %}" alt="Image Show" height="360px" width="440px">
     <div id="imgcount" hidden>{{ imgcount }}</div>
-    <script src="{% static 'smartmirror/js/imgshow.js' %}"></script>
+    <script src="{% static 'js/imgshow.js' %}"></script>
 </body>
 </html>
